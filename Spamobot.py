@@ -61,11 +61,11 @@ class callspam:
 			print('\n                   ^\nSyntaxError: invalid syntax')
 			exit()
 		else:
-			#vodaonline = requests.post('https://www.vodaonline.ru/local/components/shantilab/feedback.form/ajax.php', data={'sessid': '*', 'NAME': _name, 'PHONE': _phoneVodaonline})
-			#if vodaonline.status_code == 200:
-			#	print(Fore.GREEN + 'www.vodaonline.ru: отправлено')
-			#else:
-			#	print(Fore.RED + 'www.vodaonline.ru: не отправлено')
+			vodaonline = requests.post('https://www.vodaonline.ru/local/components/shantilab/feedback.form/ajax.php', data={'sessid': '*', 'NAME': _name, 'PHONE': _phoneVodaonline})
+			if vodaonline.status_code == 200:
+				print(Fore.GREEN + 'www.vodaonline.ru: отправлено')
+			else:
+				print(Fore.RED + 'www.vodaonline.ru: не отправлено')
 			#yurmoscow = requests.post('https://yur-moscow.ru/ajax_call_me.php', data={'param1': _phone, 'param3': _text, 'param2': _name})
 			#if yurmoscow.status_code == 200:
 			#	print(Fore.GREEN + 'yur-moscow.ru: отправлено')
